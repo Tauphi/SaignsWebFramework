@@ -34,14 +34,14 @@ function encrypt_decrypt( $action , $string , $secret )
 
 function encrypt( $data , $secret = "69&3F}fj5LYmnGVC" )
 {
-	return SaignsTools::encrypt_decrypt("encrypt", $data, $secret);
+	return encrypt_decrypt("encrypt", $data, $secret);
 }
 
 
 
 function decrypt( $data , $secret = "69&3F}fj5LYmnGVC" )
 {
-	return SaignsTools::encrypt_decrypt("decrypt", $data, $secret);
+	return encrypt_decrypt("decrypt", $data, $secret);
 }
 
 

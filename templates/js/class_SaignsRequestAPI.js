@@ -117,7 +117,7 @@ class SaignsRequestApi
 				}
 
 				console.log(resultData);
-				var jsonData = RequestApi.json_parse(resultData);
+				var jsonData = SaignsRequestApi.json_parse(resultData);
 				if ( !jsonData )
 				{
 					if ( typeof hCallbackError === 'function' )

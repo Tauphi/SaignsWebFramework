@@ -28,12 +28,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Prüfung, ob eine Zeichenkette mit einem Suchbegriff beginnt
-	 * @param unknown $str
-	 * @param unknown $needle
-	 * @return boolean
-	 */
 	private function str_starts_with( $str , $needle )
 	{
 		return substr($str, 0, strlen($needle)) === $needle;
@@ -41,12 +35,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Prüfung, ob eine Zeichenkette mit einem Suchbegriff endet
-	 * @param unknown $str
-	 * @param unknown $needle
-	 * @return boolean
-	 */
 	private function str_ends_width( $str , $needle )
 	{
 		$length = strlen($needle);
@@ -55,12 +43,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Prüft, ob der Content am Cursor mit einem Suchbegriff beginnt
-	 * @param unknown $str
-	 * @param unknown $needle
-	 * @return boolean
-	 */
 	private function starts_with( $search )
 	{
 		$len = strlen($search);
@@ -73,12 +55,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Liest den Content weiter bis zum Suchbegriff
-	 * @param unknown $str
-	 * @param unknown $needle
-	 * @return boolean
-	 */
 	private function read_to( $search )
 	{
 		$buffer = '';
@@ -96,10 +72,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Überschreibt die internen Variablen durch ein neues
-	 * @param unknown $as
-	 */
 	function assign( $as )
 	{
 		$this->hVars = $as;
@@ -107,11 +79,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Fügt weitere Variablen hinzu. Übergabe erfolgt entweder als Array oder als Parameter/Wert-Paar
-	 * @param unknown $key
-	 * @param string $value
-	 */
 	function add_assign( $key , $value = '' )
 	{
 		if ( is_array($key) )
@@ -126,9 +93,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Löscht alle Variablen
-	 */
 	function clear_assign()
 	{
 		$this->hVars = array();
@@ -136,10 +100,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Interpretiert den übergebenen Inhalt
-	 * @param unknown $content
-	 */
 	function parse( $content )
 	{
 		$this->sContent = $content;
@@ -410,10 +370,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Führt das Template aus und gibt den Output zurück
-	 * @return string
-	 */
 	public function execute()
 	{
 		$vars = '';
@@ -448,11 +404,6 @@ class SaignsTemplateEngine
 
 
 
-	/**
-	 * Importiert den Inhalt einer Template-Datei und führt diese aus
-	 * @param unknown $file
-	 * @return string
-	 */
 	public function fetch( $file )
 	{
 		$filepath = $this->sPath.'/'.$file;
