@@ -1,4 +1,4 @@
-<?
+<?php
 
 
 
@@ -253,14 +253,14 @@ function polaroid( $width , $img , $top , $left , $rot , $z )
 	$final_width = $width - ($padding * 2);
 	$final_height = $height - ($padding * 2);
 	?>
-	<div style="position: absolute; margin-left: <?=$left?>px; margin-top: <?=$top?>px; z-index: <?=$z?>;">
-		<div class="shadow" style="width: <?=$final_width?>px; height: <?=$final_height?>px; background-color: #f0f0f0; padding: <?=$padding?>px; border: 2px solid #678; transform:rotate(<?=$rot?>deg); -ms-transform:rotate(<?=$rot?>deg); -webkit-transform:rotate(<?=$rot?>deg);" class="cornerp">
-			<div style="width: <?=$swidth?>px; height: <?=$sheight?>px; background: transparent; border: 2px solid #678;">
-				<img src="<?=$img?>" style="width: <?=$swidth?>px; height: <?=$sheight?>px; user-select: none;">
+	<div style="position: absolute; margin-left: <?php echo $left; ?>px; margin-top: <?php echo $top; ?>px; z-index: <?php echo $z; ?>;">
+		<div class="shadow" style="width: <?php echo $final_width; ?>px; height: <?php echo $final_height; ?>px; background-color: #f0f0f0; padding: <?php echo $padding; ?>px; border: 2px solid #678; transform:rotate(<?php echo $rot; ?>deg); -ms-transform:rotate(<?php echo $rot; ?>deg); -webkit-transform:rotate(<?php echo $rot; ?>deg);" class="cornerp">
+			<div style="width: <?php echo $swidth; ?>px; height: <?php echo $sheight; ?>px; background: transparent; border: 2px solid #678;">
+				<img src="<?php echo $img; ?>" style="width: <?php echo $swidth; ?>px; height: <?php echo $sheight; ?>px; user-select: none;">
 			</div>
 		</div>
 	</div>
-	<?
+	<?php
 	return ob_get_clean();
 }
 

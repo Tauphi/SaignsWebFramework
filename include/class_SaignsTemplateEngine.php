@@ -482,16 +482,16 @@ function fc( $content , $params = array() )
 
 
 
-function js( $file , $params = array() )
+function js( $file )
 {
-	return '<script type="text/javascript">'.f('js/'.$file, $params).'</script>';
+	return '<script type="text/javascript">'.f('js/'.$file).'</script>';
 }
 
 
 
-function css( $file , $params = array() )
+function css( $file )
 {
-	return '<style type="text/css">'.f('css/'.$file, $params).'</style>';
+	return '<style type="text/css">'.f('css/'.$file).'</style>';
 }
 
 

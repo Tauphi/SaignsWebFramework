@@ -108,7 +108,7 @@ public static function generate( SaignsDatabase $db , $shema , $tablename , $cla
 	}
 	
 
-}<?
+}<?php
 		$buffer = ob_get_contents();
 		ob_clean();
 

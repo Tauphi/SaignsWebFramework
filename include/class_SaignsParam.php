@@ -1,4 +1,4 @@
-<?
+<?php
 
 $GLOBALS['saigns_apache'] = array();
 
