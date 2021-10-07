@@ -334,7 +334,9 @@ class SaignsTemplateEngine
 				else if ( $this->starts_with('{g ') && function_exists("g") )
 				{
 					$this->iCursor += 3;
-					$output .= g($this->read_to('}'));
+					$temp = $this->read_to('}');
+					$temp = str_replace("'","\\'",$temp);
+					$output .= g($temp);
 				}
 
 				/* SELECTED & CHECKBOX */
